@@ -41,7 +41,7 @@
 ### Clone o repositório:
 
 ```bash
-git clone https://github.com/ANDERSONGUASSU/delivery-api.git
+git clone https://github.com/ANDERSONGUASSU/delivery-api-guassu.git
 cd delivery-api
 ```
 
