@@ -45,7 +45,7 @@ git clone https://github.com/ANDERSONGUASSU/delivery-api.git
 cd delivery-api
 ```
 
-### Execute a aplicação:
+### Execute a aplicação assim:
 
 ```bash
 ./mvnw spring-boot:run
