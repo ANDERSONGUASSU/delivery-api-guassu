@@ -37,32 +37,42 @@
 ### Pré-requisitos:
 - JDK 21 instalado
 - Maven configurado (ou use o Maven Wrapper: `./mvnw`)
-  
-### Passos:
 
-### Clone o repositório
+### Clone o repositório:
 
 ```bash
 git clone https://github.com/ANDERSONGUASSU/delivery-api.git
 cd delivery-api
 ```
-### Execute a aplicação
+
+### Execute a aplicação:
+
 ```bash
 ./mvnw spring-boot:run
 ```
-### A aplicação estará disponível em:
+
+A aplicação estará disponível em:  
 ➡️ http://localhost:8080
 
+---
+
 ## 🧪 Banco de Dados H2
-Após iniciar a aplicação, você pode acessar o console do H2:
 
-URL: http://localhost:8080/h2-console
+Após iniciar a aplicação, acesse o console do H2:
 
-JDBC URL: jdbc:h2:mem:testdb
+- URL: `http://localhost:8080/h2-console`
+- JDBC URL: `jdbc:h2:mem:testdb`
+- Usuário: `sa`
+- Senha: *(em branco)*
 
+---
 
 ## 🏫 Sobre
-Projeto desenvolvido na FAT - Escola Técnica como parte de aprendizado em desenvolvimento de aplicações Java com Spring Boot.
+
+Projeto desenvolvido na **FAT - Escola Técnica** como parte de aprendizado em desenvolvimento de aplicações Java com Spring Boot.
+
+---
 
 ## 📄 Licença
-Este projeto está licenciado sob os termos da MIT License.
+
+Este projeto está licenciado sob os termos da [MIT License](LICENSE).
