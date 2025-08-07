@@ -66,6 +66,10 @@ A aplicação estará disponível em:
 - GET /h2-console - Console do banco H2
 ---
 
+## 🔍 Swagger
+Acesse a documentação interativa da API no Swagger:
+http://localhost:8080/swagger-ui/index.html
+
 ## 🧪 Banco de Dados H2
 
 Após iniciar a aplicação, acesse o console do H2:
@@ -82,7 +86,7 @@ Projeto desenvolvido na **FAT - Escola Técnica** como parte de aprendizado em d
 ---
 
 ## 👨‍💻 Desenvolvedor
-[Seu Nome] - [Sua Turma]  
+Anderson Guassu - [Sua Turma]  
 Desenvolvido com JDK 21 e Spring Boot 3.2.x
 ---
 
