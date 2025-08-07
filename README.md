@@ -5,7 +5,6 @@
 # 🚚 delivery-api
 
 > A Spring Boot project developed at FAT Technical School to manage and expose delivery-related APIs.
-
 ---
 
 ## 📦 Projeto
@@ -17,7 +16,6 @@
 **Java:** 21  
 **Spring Boot:** 3.2.x (versão estável)  
 **Gerenciador de dependências:** Maven  
-
 ---
 
 ## 🔧 Tecnologias utilizadas
@@ -29,14 +27,21 @@
 - ✅ Spring Data JPA
 - ✅ H2 Database
 - ✅ Spring Boot DevTools
-
 ---
+## ⚡ Recursos Modernos Utilizados
+- ✅ Records (Java 14+)
+- ✅ Text Blocks (Java 15+)
+- ✅ Pattern Matching (Java 17+)
+- ✅ Virtual Threads (Java 21)
+---
+
 
 ## 🚀 Como rodar o projeto localmente
 
 ### Pré-requisitos:
 - JDK 21 instalado
 - Maven configurado (ou use o Maven Wrapper: `./mvnw`)
+---
 
 ### Clone o repositório:
 
@@ -53,7 +58,12 @@ cd delivery-api
 
 A aplicação estará disponível em:  
 ➡️ http://localhost:8080
+---
 
+## 📋 Endpoints
+- GET /health - Status da aplicação (inclui versão Java)
+- GET /info - Informações da aplicação
+- GET /h2-console - Console do banco H2
 ---
 
 ## 🧪 Banco de Dados H2
@@ -64,13 +74,16 @@ Após iniciar a aplicação, acesse o console do H2:
 - JDBC URL: `jdbc:h2:mem:testdb`
 - Usuário: `sa`
 - Senha: *(em branco)*
-
 ---
 
 ## 🏫 Sobre
 
 Projeto desenvolvido na **FAT - Escola Técnica** como parte de aprendizado em desenvolvimento de aplicações Java com Spring Boot.
+---
 
+## 👨‍💻 Desenvolvedor
+[Seu Nome] - [Sua Turma]  
+Desenvolvido com JDK 21 e Spring Boot 3.2.x
 ---
 
 ## 📄 Licença
