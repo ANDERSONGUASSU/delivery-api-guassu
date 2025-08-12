@@ -1,42 +1,39 @@
 package com.deliverytech.delivery.dto;
 
+import lombok.Data;
+
+@Data
 public class RestaurantDTO {
     private Long id;
     private String name;
+    private String description;
+    private String phone;
     private String address;
-    private String phoneNumber;
+    private String addressNumber;
 
-    // Getters and Setters
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
+    public RestaurantDTO(Long id, String name, String description, String phone, String address, String addressNumber) {
         this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
         this.name = name;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
+        this.description = description;
+        this.phone = phone;
         this.address = address;
+        this.addressNumber = addressNumber;
     }
 
-    public String getPhoneNumber() {
-        return phoneNumber;
+    public RestaurantDTO() {
+        super();
     }
 
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
+    @Override
+    public String toString() {
+        return "RestaurantDTO{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", description='" + description + '\'' +
+                ", phone='" + phone + '\'' +
+                ", address='" + address + '\'' +
+                ", addressNumber='" + addressNumber + '\'' +
+                '}';
     }
-
 }
+
