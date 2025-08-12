@@ -1,9 +1,7 @@
 package com.deliverytech.delivery.model;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 @Data
 @NoArgsConstructor
@@ -20,5 +18,5 @@ public class Restaurant {
     private String description;
     private String phone;
     private String address;
-    private String addressNumber;
+    private Number addressNumber;
 }

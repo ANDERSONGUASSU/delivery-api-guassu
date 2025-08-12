@@ -3,37 +3,39 @@ package com.deliverytech.delivery.dto;
 import lombok.Data;
 
 @Data
-public class RestaurantDto {
+public class CustomerDto {
     private Long id;
     private String name;
-    private String description;
+    private String email;
+    private Number CPF;
     private String phone;
     private String address;
-    private String addressNumber;
+    private Number addressNumber;
 
-    public RestaurantDto(Long id, String name, String description, String phone, String address, String addressNumber) {
+    public CustomerDto(Long id, String name, String email, Number CPF, String phone, String address, Number addressNumber) {
         this.id = id;
         this.name = name;
-        this.description = description;
+        this.email = email;
+        this.CPF = CPF;
         this.phone = phone;
         this.address = address;
         this.addressNumber = addressNumber;
     }
 
-    public RestaurantDto() {
+    public CustomerDto() {
         super();
     }
 
     @Override
     public String toString() {
-        return "RestaurantDto{" +
+        return "CustomerDto{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", description='" + description + '\'' +
+                ", email='" + email + '\'' +
+                ", CPF=" + CPF +
                 ", phone='" + phone + '\'' +
                 ", address='" + address + '\'' +
-                ", addressNumber='" + addressNumber + '\'' +
+                ", addressNumber=" + addressNumber +
                 '}';
     }
 }
-

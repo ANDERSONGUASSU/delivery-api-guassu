@@ -6,7 +6,7 @@ import java.util.stream.Collectors;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.deliverytech.delivery.dto.RestaurantDTO;
+import com.deliverytech.delivery.dto.RestaurantDto;
 import com.deliverytech.delivery.model.Restaurant;
 import com.deliverytech.delivery.repository.IRestaurantRepository;
  
@@ -24,12 +24,12 @@ public class RestaurantService {
         super();
     }
    
-    public List<RestaurantDTO> findAll() {
-        return repository.findAll().stream().map(this::ConvertEntityToDTO).collect(Collectors.toList());
+    public List<RestaurantDto> findAll() {
+        return repository.findAll().stream().map(this::ConvertEntityToDto).collect(Collectors.toList());
     }
 
-    private RestaurantDTO ConvertEntityToDTO(Restaurant entity) {
-        RestaurantDTO dto = new RestaurantDTO();
+    private RestaurantDto ConvertEntityToDto(Restaurant entity) {
+        RestaurantDto dto = new RestaurantDto();
         dto.setName(entity.getName());
         dto.setDescription((entity.getDescription()));
         return dto;
