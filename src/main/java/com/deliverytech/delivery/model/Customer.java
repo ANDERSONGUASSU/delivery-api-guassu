@@ -25,7 +25,7 @@ public class Customer {
     private String name;
 
     @Column(nullable = false, unique = true, length = 11)
-    private String CPF;
+    private String cpf;
 
     @Column(nullable = false, length = 15)
     private String phone;

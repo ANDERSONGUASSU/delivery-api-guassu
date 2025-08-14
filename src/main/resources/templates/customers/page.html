@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>Clientes</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+   <link rel="stylesheet" type="text/css" th:href="@{/css/global.css}" />
+</head>
+<body class="bg-gray-100 text-gray-800 p-6 container">
+
+    <h1 class="text-3xl font-bold text-center mb-8">Cadastro de Cliente</h1>
+
+    <form th:action="@{/customers}" th:object="${customer}" method="post" class="max-w-3xl mx-auto bg-white p-6 rounded-lg shadow-md space-y-4">
+        <div class="grid grid-cols-1 gap-4 form-container">
+            <input type="text" th:field="*{name}" placeholder="Nome" required class="border rounded px-3 py-2 w-full"/>
+            <input type="text" th:field="*{email}" placeholder="Email" required class="border rounded px-3 py-2 w-full"/>
+            <input type="password" th:field="*{password}" placeholder="Senha" required class="border rounded px-3 py-2 w-full"/>
+            <input type="text" th:field="*{cpf}" placeholder="CPF" required class="border rounded px-3 py-2 w-full"/>
+            <input type="text" th:field="*{phone}" placeholder="Telefone" required class="border rounded px-3 py-2 w-full"/>
+            <input type="text" th:field="*{address}" placeholder="Endereço" required class="border rounded px-3 py-2 w-full"/>
+            <input type="number" th:field="*{addressNumber}" placeholder="Número" required class="border rounded px-3 py-2 w-full"/>
+            <input type="text" th:field="*{complement}" placeholder="Complemento" class="border rounded px-3 py-2 w-full"/>
+            <input type="text" th:field="*{neighborhood}" placeholder="Bairro" required class="border rounded px-3 py-2 w-full"/>
+            <input type="text" th:field="*{city}" placeholder="Cidade" required class="border rounded px-3 py-2 w-full"/>
+            <input type="text" th:field="*{state}" placeholder="Estado" required class="border rounded px-3 py-2 w-full"/>
+            <input type="text" th:field="*{zipCode}" placeholder="CEP" required class="border rounded px-3 py-2 w-full"/>
+        </div>
+        <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">Cadastrar</button>
+    </form>
+
+    <div class="max-w-5xl mx-auto mt-12">
+        <table class="min-w-full bg-white rounded-lg shadow-md overflow-hidden">
+            <thead class="bg-blue-600 text-white">
+                <tr>
+                    <th class="py-3 px-4 text-left">Nome</th>
+                    <th class="py-3 px-4 text-left">Email</th>
+                    <th class="py-3 px-4 text-left">Telefone</th>
+                    <th class="py-3 px-4 text-left">Endereço</th>
+                    <th class="py-3 px-4 text-left">Cidade</th>
+                </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-200">
+                <tr th:each="c : ${customers}" class="hover:bg-gray-100">
+                    <td class="py-2 px-4" th:text="${c.name}"></td>
+                    <td class="py-2 px-4" th:text="${c.email}"></td>
+                    <td class="py-2 px-4" th:text="${c.phone}"></td>
+                    <td class="py-2 px-4" th:text="${c.address} + ' ' + ${c.addressNumber}"></td>
+                    <td class="py-2 px-4" th:text="${c.city}"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>

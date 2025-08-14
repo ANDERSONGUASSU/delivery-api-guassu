@@ -1,0 +1,6 @@
+2025-08-14 19:04:52.754176-03:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "CPF CHARACTER VARYING(11)": "'390.857.568-04' (14)"; SQL statement:
+insert into customers (active,address,address_number,city,complement,cpf,created_at,email,name,neighborhood,password,phone,state,updated_at,zip_code,id) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,default) [22001-232]
+2025-08-14 19:05:13.529823-03:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "ZIP_CODE CHARACTER VARYING(8)": "'17350-000' (9)"; SQL statement:
+insert into customers (active,address,address_number,city,complement,cpf,created_at,email,name,neighborhood,password,phone,state,updated_at,zip_code,id) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,default) [22001-232]

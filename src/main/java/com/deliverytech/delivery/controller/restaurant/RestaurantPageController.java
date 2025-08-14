@@ -3,17 +3,15 @@ package com.deliverytech.delivery.controller.restaurant;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
+
 
 import com.deliverytech.delivery.dto.RestaurantDto;
 import com.deliverytech.delivery.service.RestaurantService;
 
 @Controller
 @RequestMapping("/restaurants")
-public class RestaurantWebController {
+public class RestaurantPageController {
 
     @Autowired
     private RestaurantService restaurantService;

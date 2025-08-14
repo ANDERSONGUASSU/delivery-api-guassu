@@ -36,9 +36,12 @@ public class CustomerService {
 
     // Create a new customer
     public CustomerDto create(CustomerDto dto) {
+        if (dto.getPassword() == null || dto.getPassword().isBlank()) {
+            throw new IllegalArgumentException("Password is required");
+        }
         Customer entity = mapper.toEntity(dto);
-        entity.setPassword(entity.getPassword());
         entity.setActive(true);
+
         return mapper.toDto(repository.save(entity));
     }
 

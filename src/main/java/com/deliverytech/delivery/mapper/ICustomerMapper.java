@@ -1,7 +1,6 @@
 package com.deliverytech.delivery.mapper;
 
 import org.mapstruct.Mapper;
-import org.mapstruct.Mapping;
 
 import com.deliverytech.delivery.dto.CustomerDto;
 import com.deliverytech.delivery.model.Customer;
@@ -13,9 +12,5 @@ public interface ICustomerMapper {
     CustomerDto toDto(Customer customer);
 
     // Map CustomerCreateDto to Customer
-    @Mapping(target = "id", ignore = true)
-    @Mapping(target = "active", ignore = true)
-    @Mapping(target = "createdAt", ignore = true)
-    @Mapping(target = "updatedAt", ignore = true)
     Customer toEntity(CustomerDto dto);
 }

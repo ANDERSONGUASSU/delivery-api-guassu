@@ -10,7 +10,7 @@ public class CustomerDto {
     private String email;
     private String password;
     private String name;
-    private String CPF;
+    private String cpf;
     private String phone;
     private String address;
     private Integer addressNumber;

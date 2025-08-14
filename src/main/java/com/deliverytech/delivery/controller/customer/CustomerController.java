@@ -3,6 +3,7 @@ package com.deliverytech.delivery.controller.customer;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import com.deliverytech.delivery.dto.CustomerDto;
@@ -14,31 +15,33 @@ import io.swagger.v3.oas.annotations.parameters.RequestBody;
 @RequestMapping("/api/v1/customers")
 public class CustomerController {
     @Autowired
-    private CustomerService customerService;
+    private CustomerService service;
 
     @GetMapping
-    public List<CustomerDto> getAllCustomers() {
-        return customerService.findAll();
+    public ResponseEntity<List<CustomerDto>> getAll() {
+        return ResponseEntity.ok(service.findAll());
+        
     }
 
     @GetMapping("/{id}")
-    public CustomerDto getCustomerById(@PathVariable Long id) {
-        return customerService.findById(id);
+    public ResponseEntity<CustomerDto> getById(@PathVariable Long id) {
+        return ResponseEntity.ok(service.findById(id));
     }
 
     @PostMapping
-    public CustomerDto createCustomer(@RequestBody CustomerDto customerDto) {
-        return customerService.create(customerDto);
+    public ResponseEntity<CustomerDto> create(@RequestBody CustomerDto dto) {
+        return ResponseEntity.ok(service.create(dto));
     }
 
     @PutMapping("/{id}")
-    public CustomerDto updateCustomer(@PathVariable Long id, @RequestBody CustomerDto customerDto) {
-        return customerService.update(id, customerDto);
+    public ResponseEntity<CustomerDto> update(@PathVariable Long id, @RequestBody CustomerDto dto) {
+        return ResponseEntity.ok(service.update(id, dto));
     }
 
     @DeleteMapping("/{id}")
-    public void deleteCustomer(@PathVariable Long id) {
-        customerService.delete(id);
+    public ResponseEntity<Void> delete(@PathVariable Long id) {
+        service.delete(id);
+        return ResponseEntity.noContent().build();
     }
 
 }
