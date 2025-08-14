@@ -1,39 +1,24 @@
 package com.deliverytech.delivery.dto;
 
-import lombok.Data;
+import lombok.*;
 
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class RestaurantDto {
-    private Long id;
+    private String email;
+    private String password;
     private String name;
+    private String cnpj;
     private String description;
     private String phone;
     private String address;
-    private String addressNumber;
-
-    public RestaurantDto(Long id, String name, String description, String phone, String address, String addressNumber) {
-        this.id = id;
-        this.name = name;
-        this.description = description;
-        this.phone = phone;
-        this.address = address;
-        this.addressNumber = addressNumber;
-    }
-
-    public RestaurantDto() {
-        super();
-    }
-
-    @Override
-    public String toString() {
-        return "RestaurantDto{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", description='" + description + '\'' +
-                ", phone='" + phone + '\'' +
-                ", address='" + address + '\'' +
-                ", addressNumber='" + addressNumber + '\'' +
-                '}';
-    }
+    private Integer addressNumber;
+    private String complement;
+    private String neighborhood;
+    private String city;
+    private String state;
+    private String zipCode;
 }
+
 

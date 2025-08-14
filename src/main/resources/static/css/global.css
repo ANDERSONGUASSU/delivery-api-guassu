@@ -1,0 +1,16 @@
+.form-container {
+    color: #333; /* cor do texto */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.form-container input {
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    width: 100%;
+    color: #333;
+}
+
+.form-container input::placeholder {
+    color: #555;
+}
